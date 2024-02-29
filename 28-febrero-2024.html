@@ -1,49 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        //ejercicio 1: lavanderia
+              //ejercicio 1: lavanderia
 
-        const cost_basic = 2000;
-        const cost_premium = 4000;
+              //   const cost_basic = 2000;
+              //   const cost_premium = 4000;
 
-        const option_basic = 1;
-        const option_premium = 2;
+              //   const option_basic = 1;
+              //   const option_premium = 2;
 
-        let unit_cost;
-        let units;
+              //   let unit_cost;
+              //   let units;
 
-        let selectedoption = parseInt(prompt("selecina el tipo de servicio indcando el numero: \n1. Basico ($2000)\n2. premium ($4000)"));
+              //   let selectedoption = parseInt(
+              //     prompt(
+              //       "selecina el tipo de servicio indcando el numero: \n1. Basico ($2000)\n2. premium ($4000)"
+              //     )
+              //   );
 
-        if (selectedoption == option_basic) {
-            unit_cost = cost_basic;
-            units = parseInt(prompt("cuantas uniades desea labar, ingresa un valor entre 1 y 20: "));
-        } else if (selectedoption == option_premium) {
-            unit_cost = cost_premium;
-            units = parseInt(prompt("cuantas uniades desea lavar, ingresa un valor entre 1 y 20: "));
-        } else {
-            alert(" por favor selecciona un tipo de servicio valido ");
-        } if (units >= 1 && units <= 20) {
-            alert ( "costo total: $" + (unit_cost * units));
+              //   if (selectedoption == option_basic) {
+              //     unit_cost = cost_basic;
+              //     units = parseInt(
+              //       prompt("cuantas uniades desea lavar, ingresa un valor entre 1 y 20: ")
+              //     );
+              //   } else if (selectedoption == option_premium) {
+              //     unit_cost = cost_premium;
+              //     units = parseInt(
+              //       prompt("cuantas uniades desea lavar, ingresa un valor entre 1 y 20: ")
+              //     );
+              //   } else {
+              //     alert(" por favor selecciona un tipo de servicio valido ");
+              //   }
+              //   if (units >= 1 && units <= 20) {
+              //     alert("costo total: $" + unit_cost * units);
+              //   } else {
+              //     alert(" por favor selecciona un tipo de servicio valido ");
+              //   }
+              // 2. matricula uni
+              //   const tution = 7000000;
+              //   let totalpay;
+              //   let paymentmethod = parseInt(
+              //     prompt(
+              //       "seleccina el tipo de pago: \n1. Pago completo (5% de descuento) \n2. pago en 2 cuotas \n3. pago en 3 cuotas"
+              //     )
+              //   );
+              //   switch (paymentmethod) {
+              //     case 1:
+              //       totalpay = tution - (tution * 0.05);
+              //       alert("su valor a pagar es: $" + totalpay);
+              //       break;
+              //     case 2:
+              //         totalpay = (tution/2) + (tution * 0.02);
+              //         alert("su valor a pagar es: $" + totalpay);
+              //         break;
+              //     case 3:
+              //     totalpay = (tution/3) + (tution * 0.04);
+              //     alert("su valor a pagar es: $" + Math.round(totalpay) );
+              //         break;
+              //     default:
+              //     alert("eliga una opción valida, por favor 😊");
+              //   }
+              //3. zapatería
 
-        } else {
-            alert(" por favor seleccioona un tipo de servicio valido ");
-        }
-
-        //2. matricula uni
-        //3. zapatería
-        //4. escobas
-        // 5. biblioteca
-        //6.domicillos
-        //7. boletas conciertos
+              const pclassic = 500000
+              const prunning = 800000
+              const pbasketball = 1000000
+              let totalpayz
+              let model = parseInt(prompt("seleccina el tipo de modelo: \n1. classic \n2. basketball \n3. running "));
+              let size = parseInt(prompt("introduzca su talla, pero recuerde que únicamente tenemos dispoción desde la 35 a la 44"));
+              switch (model) {
+                case 1:
+                if (size >= 35 && size <= 44) {
+                    let tobuy = parseInt(prompt("introduzca cuantos pares desea comprar recuerde que únicamente puede comprar 5 pares por transacción"));
+                    if (tobuy >=1 && tobuy <=5 ) {
+                        if (tobuy >= 3){
+                            totalpayz = pclassic * tobuy - ((pclassic * tobuy)* 0.1)
+                            alert("su valor a pagar es: $" + totalpayz)
+                        } else {
+                            totalpayz = pclassic * tobuy 
+                            alert("su valor a pagar es: $" + totalpayz)
+                        }
+                    } else {
+                        alert("por favor ingresa una cantidad valida")
+                    }
+                } else {
+                    alert("por favor ingresa una talla valida")
+                } break;
+                case 2: 
+                if (size >= 35 && size <= 44) {
+                    let tobuy = parseInt(prompt("introduzca cuantos pares desea comprar recuerde que únicamente puede comprar 5 pares por transacción"));
+                    if (tobuy >=1 && tobuy <=5 ) {
+                        if (tobuy >= 3){
+                            totalpayz = pbasketball * tobuy - ((pbasketball * tobuy)* 0.1)
+                            alert("su valor a pagar es: $" + totalpayz)
+                        } else {
+                            totalpayz = pbasketball * tobuy 
+                            alert("su valor a pagar es: $" + totalpayz)
+                        }
+                    } else {
+                        alert("por favor ingresa una cantidad valida")
+                    }
+                } else {
+                    alert("por favor ingresa una talla valida")
+                }break;
+                case 3: 
+                if (size >= 35 && size <= 44) {
+                    let tobuy = parseInt(prompt("introduzca cuantos pares desea comprar recuerde que únicamente puede comprar 5 pares por transacción"));
+                    if (tobuy >=1 && tobuy <=5 ) {
+                        if (tobuy >= 3){
+                            totalpayz = prunning * tobuy - ((prunning * tobuy)* 0.1)
+                            alert("su valor a pagar es: $" + totalpayz)
+                        } else {
+                            totalpayz = prunning * tobuy 
+                            alert("su valor a pagar es: $" + totalpayz)
+                        }
+                    } else {
+                        alert("por favor ingresa una cantidad valida")
+                    }
+                } else {
+                    alert("por favor ingresa una talla valida")
+                }break;
+                default: 
+                    alert(" por favor ingrese un modelo  valido")
+              }
+              //4. escobas
+              // 5. biblioteca
+              //6.domicillos
+              //7. boletas conciertos
     </script>
-</body>
-
+  </body>
 </html>
