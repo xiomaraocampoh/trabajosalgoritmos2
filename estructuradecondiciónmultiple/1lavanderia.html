@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //ejercicio 1: lavanderia
+
+        const cost_basic = 2000;
+        const cost_premium = 4000;
+
+        const option_basic = 1;
+        const option_premium = 2;
+
+        let unit_cost;
+        let units;
+
+        let selectedoption = parseInt(
+          prompt(
+            "selecina el tipo de servicio indcando el numero: \n1. Basico ($2000)\n2. premium ($4000)"
+          )
+        );
+
+        if (selectedoption == option_basic) {
+          unit_cost = cost_basic;
+          units = parseInt(
+            prompt("cuantas uniades desea lavar, ingresa un valor entre 1 y 20: ")
+          );
+        } else if (selectedoption == option_premium) {
+          unit_cost = cost_premium;
+          units = parseInt(
+            prompt("cuantas uniades desea lavar, ingresa un valor entre 1 y 20: ")
+          );
+        } else {
+          alert(" por favor selecciona un tipo de servicio valido ");
+        }
+        if (units >= 1 && units <= 20) {
+          alert("costo total: $" + unit_cost * units);
+        } else {
+          alert(" por favor selecciona un tipo de servicio valido ");
+        }
+ </script>
+</body>
+</html>

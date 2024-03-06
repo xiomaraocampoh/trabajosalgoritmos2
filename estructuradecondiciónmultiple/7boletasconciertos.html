@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //7. boletas conciertos
+        const lgeneral = 50000
+        const lpreferencial = 150000
+        const lvip = 300000
+        let total_price;
+        let cantidadboletos = parseInt(prompt("ingrese cuantos boletos desea"));
+        if (cantidadboletos >= 1 && cantidadboletos <= 5) {
+            let localidad = parseInt(prompt("Selecciona la localidad deseada:\n1. general \n2. preferencial \n3. vip"));
+            if (localidad <= 3 && localidad >= 1) {
+                switch (localidad) {
+                    case 1:
+                        total_price = ((lgeneral + (lgeneral * 0.1)) * (cantidadboletos * 5000))
+                        alert("el precio es de: " + total_price + " usted puede pagar en efectivo o tarjeta");
+                        break;
+                    case 2:
+                        total_price = ((lpreferencial + (lpreferencial * 0.1)) * (cantidadboletos * 5000))
+                        alert("el precio es de: " + total_price + " usted puede pagar en efectivo o tarjeta");
+                        break;
+                    case 3:
+                        total_price = ((lvip + (lvip * 0.1)) * (cantidadboletos * 5000))
+                        alert("el precio es de: " + total_price + " usted puede pagar en efectivo o tarjeta");
+                        break;
+                    default: alert("revise las opciones ingresadas")
+                }
+            } else {
+                alert("ingrese una localidad valida, por favor")
+            }
+        } else {
+            alert("ingrese una cantidad de boletos valida")
+        }
+    </script>
+</body>
+
+</html>

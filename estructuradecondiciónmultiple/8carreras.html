@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const selectedCarrera = prompt("Seleccione en que carrera desea apostar:\ncarrera 1\ncarrera 2");
+        const selectedPilot = prompt("Ingrese a que piloto  desea apostar. \n a \n b \n c \n d \ne \n f");
+        const betAmount = parseFloat(prompt("Ingrese el monto de su apuesta."));
+        const carrerasDisponibles = {
+            carrera1: {
+                pilotos: ['Piloto A', 'Piloto B', 'Piloto C'],
+                cuotas: [1.5, 2.3, 1.8]
+            },
+            carrera2: {
+                pilotos: ['Piloto D', 'Piloto E', 'Piloto F'],
+                cuotas: [2.2, 1.9, 1.7]
+            }
+        };
+    </script>
+</body>
+
+</html>

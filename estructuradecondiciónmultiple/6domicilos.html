@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>const restaurantHamburguesas = 1;
+        const restaurantPizzeria = 2;
+        const restaurantComidaChina = 3;
+        const hamburguesaSimple = 25000;
+        const pizzaFamilia = 85000;
+        const fideosConPollo = 18000;
+        let selectedRestaurant = parseInt(
+            prompt("Selecciona un restaurante:\n1. Hamburguesas\n2. Pizzería\n3. Comida China"));
+        let totalPrice = 0;
+        let subtotalPrice = 0;
+        switch (selectedRestaurant) {
+            case restaurantHamburguesas:
+                let hamburguesasQuantity = parseInt(
+                    prompt("Cuantas hamburguesas simples deseas? (25000 cada una)")
+                );
+                subtotalPrice = hamburguesasQuantity * hamburguesaSimple;
+                break;
+            case restaurantPizzeria:
+                let pizzaQuantity = parseInt(
+                    prompt("Cuantas pizzas familia deseas? (85000 cada una)")
+                );
+                subtotalPrice = pizzaQuantity * pizzaFamilia;
+                break;
+            case restaurantComidaChina:
+                let fideosQuantity = parseInt(
+                    prompt("Cuantos fideos con pollo deseas? (18000 cada uno)")
+                );
+                subtotalPrice = fideosQuantity * fideosConPollo;
+                break;
+            default:
+                alert("El restaurante seleccionado no es válido.");
+                break;
+        }
+        if (subtotalPrice < 23000) {
+            alert(
+                "El pedido mínimo es de $23000, por favor selecciona más artículos."
+            );
+        } else {
+            totalPrice = subtotalPrice + 5000;
+            alert(
+                "Resumen del pedido:\nSubtotal: $" +
+                subtotalPrice +
+                "\nCosto de envío: $5000\nTotal: $" +
+                totalPrice
+            );
+        }
+    </script>
+</body>
+
+</html>
