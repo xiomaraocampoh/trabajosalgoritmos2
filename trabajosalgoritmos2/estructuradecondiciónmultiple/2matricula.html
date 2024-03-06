@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 2. matricula uni
+        const tution = 7000000;
+        let totalpay;
+        let paymentmethod = parseInt(
+          prompt(
+            "seleccina el tipo de pago: \n1. Pago completo (5% de descuento) \n2. pago en 2 cuotas \n3. pago en 3 cuotas"
+          )
+        );
+        switch (paymentmethod) {
+          case 1:
+            totalpay = tution - (tution * 0.05);
+            alert("su valor a pagar es: $" + totalpay);
+            break;
+          case 2:
+              totalpay = (tution/2) + (tution * 0.02);
+              alert("su valor a pagar es: $" + totalpay);
+              break;
+          case 3:
+          totalpay = (tution/3) + (tution * 0.04);
+          alert("su valor a pagar es: $" + Math.round(totalpay) );
+              break;
+          default:
+          alert("eliga una opción valida, por favor 😊");
+        }
+    </script>
+</body>
+</html>

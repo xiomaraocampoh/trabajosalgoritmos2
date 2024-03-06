@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //4. escobas
+    const price_model_dura_sintetico = 8000;
+    const price_model_dura_natural = 10000;
+    const price_model_suave_sintetico = 8000;
+    const price_model_suave_natural = 10000;
+    const price_model_cepillo_sintetico = 12000;
+    const price_model_cepillo_natural = 15000;
+    const price_option_mango_largo = 2000;
+    const price_option_gancho_punta = 500;
+    let total_price;
+    let price;
+    let selected_model = parseInt(prompt("selecciona el modelo de escoba: \n1. Escoba dura\n2. Escoba suave\n3. Cepillo"));
+    let selected_material = parseInt(prompt("selecciona el material: \n1. Sintético\n2. Natural"));
+    let selected_option = parseInt(prompt("selecciona una opcion adicional: \n1. Mango largo\n2. Gancho en la punta"));
+    let units = parseInt(prompt("cuantas escobas desea: entre 3 y 30 unidades: "));
+    switch (selected_mode){
+      case 1:
+      if (selected_material == 1) {
+        price = price_model_dura_sintetico;
+      } else if (selected_material == material_natural) {
+        price = price_model_dura_natural;
+      }
+      if (selected_option == option_mango_largo) {
+      price += price_option_mango_largo;
+    } else if (selected_option == option_gancho_punta) {
+      price += price_option_gancho_punta;
+    }if (units <= 3 || units >= 30) {
+      alert("por favor selecciona una cantidad entre 3 y 30 unidades");
+    } else {
+      alert("costo total: $" + total_price * units);
+    } break;
+      case 2: 
+      if (selected_material == material_sintetico) {
+        price = price_model_suave_sintetico;
+      } else if (selected_material == material_natural) {
+        price = price_model_suave_natural;
+      }
+      if (selected_option == option_mango_largo) {
+      price += price_option_mango_largo;
+    } else if (selected_option == option_gancho_punta) {
+      price += price_option_gancho_punta;
+    } break;
+      case 3:
+        if (selected_material == material_sintetico) {
+        price = price_model_cepillo_sintetico;
+      } else if (selected_material == material_natural) {
+        price = price_model_cepillo_natural;
+      } if (selected_option == option_mango_largo) {
+      price += price_option_mango_largo;
+    } else if (selected_option == option_gancho_punta) {
+      price += price_option_gancho_punta;
+    }if (units <= 3 || units >= 30) {
+      alert("por favor selecciona una cantidad entre 3 y 30 unidades");
+    } else {
+      alert("costo total: $" + total_price * units);
+    }break;
+      default: alert("asegurese de haber seleccionado todas las opciones de manera correcta")
+    }
+  </script>
+</body>
+
+</html>

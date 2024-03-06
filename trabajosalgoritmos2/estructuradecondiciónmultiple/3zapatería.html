@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3. zapatería
+        const pclassic = 500000
+        const prunning = 800000
+        const pbasketball = 1000000
+        let totalpayz
+        let model = parseInt(prompt("seleccina el tipo de modelo: \n1. classic \n2. basketball \n3. running "));
+        let size = parseInt(prompt("introduzca su talla, pero recuerde que únicamente tenemos dispoción desde la 35 a la 44"));
+        switch (model) {
+          case 1:
+          if (size >= 35 && size <= 44) {
+              let tobuy = parseInt(prompt("introduzca cuantos pares desea comprar recuerde que únicamente puede comprar 5 pares por transacción"));
+              if (tobuy >=1 && tobuy <=5 ) {
+                  if (tobuy >= 3){
+                      totalpayz = pclassic * tobuy - ((pclassic * tobuy)* 0.1)
+                      alert("su valor a pagar es: $" + totalpayz)
+                  } else {
+                      totalpayz = pclassic * tobuy
+                      alert("su valor a pagar es: $" + totalpayz)
+                  }
+              } else {
+                  alert("por favor ingresa una cantidad valida")
+              }
+          } else {
+              alert("por favor ingresa una talla valida")
+          } break;
+          case 2:
+          if (size >= 35 && size <= 44) {
+              let tobuy = parseInt(prompt("introduzca cuantos pares desea comprar recuerde que únicamente puede comprar 5 pares por transacción"));
+              if (tobuy >=1 && tobuy <=5 ) {
+                  if (tobuy >= 3){
+                      totalpayz = pbasketball * tobuy - ((pbasketball * tobuy)* 0.1)
+                      alert("su valor a pagar es: $" + totalpayz)
+                  } else {
+                      totalpayz = pbasketball * tobuy
+                      alert("su valor a pagar es: $" + totalpayz)
+                  }
+              } else {
+                  alert("por favor ingresa una cantidad valida")
+              }
+          } else {
+              alert("por favor ingresa una talla valida")
+          }break;
+          case 3:
+          if (size >= 35 && size <= 44) {
+              let tobuy = parseInt(prompt("introduzca cuantos pares desea comprar recuerde que únicamente puede comprar 5 pares por transacción"));
+              if (tobuy >=1 && tobuy <=5 ) {
+                  if (tobuy >= 3){
+                      totalpayz = prunning * tobuy - ((prunning * tobuy)* 0.1)
+                      alert("su valor a pagar es: $" + totalpayz)
+                  } else {
+                      totalpayz = prunning * tobuy
+                      alert("su valor a pagar es: $" + totalpayz)
+                  }
+              } else {
+                  alert("por favor ingresa una cantidad valida")
+              }
+          } else {
+              alert("por favor ingresa una talla valida")
+          }break;
+          default:
+              alert(" por favor ingrese un modelo valido")
+        }
+    </script>
+</body>
+</html>

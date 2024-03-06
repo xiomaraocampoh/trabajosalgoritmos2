@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <script> 
+     //0
+    let enchufle = false;
+    enchufle ? console.log ( " esta encendido ") : console.log ("esta apagado")
+//1
+let edad = 17; 
+edad >= 18 ? console.log ("es mayor de edad") : console.log (" es menor de edad")
+//2
+let num = -21
+num > 0 ? console.log ("numero + ") : console.log (" numero -")
+   
+//3
+
+let canchaocupada = true ;
+let nombrecancha =" sport"
+let mensaje = canchaocupada ? `la cancha llamada ${ nombrecancha} esta ocupada` : `la cancha ${ nombrecancha} esta disponible` ;     
+   console.log (mensaje)
+   
+// 4 
+
+const email = "ocampohurtadoxiomara@gmail.com"
+const contraseña = "1234"
+email == "ocampohurtadoxiomara@gmail.com" && contraseña == "1234" ? console.log (`señor/a registrado con ${email}, bienvendio al sistema `): console.log (`señor/a usted ha registrado mal el correo y/o contraseña `)
+   
+   //5 
+let colorsem= "Amarillo";
+
+colorsem == "verde" ? console.log (` el semaforo esta en ${colorsem} siga`) : 
+colorsem == "rojo" ? console.log (` el semaforo esta en ${colorsem} pare`) :
+colorsem == "Amarillo" ? console.log (` el semaforo esta en ${colorsem} preacaución o atento `) :
+console.log (`semaforo dañado`)
+
+//declaraciónes con if 1.
+
+let temp = 40; 
+if( temp >= 40){ 
+    console.log(` fiebre detectada `)
+}
+
+//2
+
+let tipocliente= "normal"; 
+if (tipocliente == "normal") {
+console.log (` dirigase modulo 1  `)
+} else if (tipocliente  == "preferencial") {
+console.log (` dirigase modulo 4 o 5 `)
+} else {
+    console.log (` no registrado modulo 2  `)
+}
+   
+//3
+
+let emailguradado = "ocampohurtadoxiomara@gamil.com" ; 
+let claveguardada = " 1234 ";
+let emailing = " ohurtadoxiomara@gmail.com";
+let claveing = " 1234 "
+ if (emailguradado==emailing && claveguardada==claveing) {
+console.log (` bienvenido `) 
+ }else {
+console.log (" acceso denegado")    
+ }
+
+// 4
+let derecha = true;
+let izquierda = false;
+let arriba = false;
+let abajo = false;
+
+if (derecha) {
+    console.log ("el robot se mueve a la derecha")
+}else if (izquierda) {
+    console.log(" el robot se mueve a la izquierda")
+} else if (arriba) {
+    console.log ("el robot se meuve hacia arriba")
+}else if  (abajo){
+    console.log ("el robot se mueve hacia abajo ")
+}else{
+    console.log (" el robot no puede moverse")
+}
+
+//5
+
+let encendido = true;
+let velocidad = 32;
+if (encendido){ console.log ("el carro esta encendido");
+}if (velocidad ==0 ){
+    console.log ("la velocidad del carro es cero, esta F ");
+} else if (velocidad >0 && velocidad <= 100) { 
+console.log("el carro esta en marcah")
+}else{
+    console.log ("encienda el auto")
+}
+
+//6
+
+let dia = "miercoles ";
+let clase = "algoritmo";
+if (dia == "miercoles") {
+    console.log (` hoy es ${dia}, por lo que la clase será ${clase}`);
+}
+
+//ejemplo: 
+
+let a =  3;
+let b = 2;
+let c = 5
+a= b++
+b++
+c = 1
+
+console.log (a+b -(c**2))
+
+
+//ejemplo 2
+
+let d = 6
+let  e = 7
+d++
+if (d<e){
+    console.log (d**2)
+    b++
+}else if (d==e){
+    console.log (b+3-3**2)
+}else{
+    console.log (d + e)
+}
+   </script>
+
+</body>
+</html>
