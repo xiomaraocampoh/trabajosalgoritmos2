@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-//while
-// let i = 0
-// let fin = 5
-// while (i<=fin){
-//     console.log("xiomara ocampo hurtado" +  i ++ )
-// }
-//ejercicio 
-let i = 10
-let fin = 5
-while (i >= fin){if (i!=7){
-    console.log("el número es:" +  i )
-    i --
-} 
-}
+        //while
+        // let i = 0
+        // let fin = 5
+        // while (i<=fin){
+        //     console.log("xiomara ocampo hurtado" +  i ++ )
+        // }
+        //ejercicio 
+        // let i = 10
+        // let fin = 5
+        // while (i >= fin){if (i!=7){
+        //     console.log("el número es:" +  i )
+        //     i --
+        // } 
+        // }
+
+        let check = false;
+        let saldocuenta = 30000;
+        while (check != true) {
+            let option = parent(prompt(("bienvenido, seleccione que desea hacer \n1. ver saldo. \n2. retirar")));
+            switch (option) {
+                case 1: alert("su saldo es: " + saldocuenta); 
+                break;
+                case 2:
+                    let retiro = (parseInt(prompt(" ingrese cuanto desea retirar ")));
+                    if (retiro > saldocuenta) {
+                        alert("cantidad no valido")
+                    } else {
+                        saldocuenta -= retiro;
+                        alert("transaccion exitosa: \n1. usted ha retirado:" + retiro + "\n2. Usted tiene: " + saldocuenta + " en su cuenta.");
+                        break;
+                    }
+
+            }
+        } 
     </script>
 </body>
+
 </html>

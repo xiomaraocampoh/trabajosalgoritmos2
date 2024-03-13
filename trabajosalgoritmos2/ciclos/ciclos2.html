@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //cajero
+      // let check = false;
+      // let saldocuenta = 30000;
+      // while (check != true) {
+      //     let option = parseInt(prompt(("bienvenido, seleccione que desea hacer \n1. ver saldo. \n2. retirar \n3. consignar \n4. salir")));
+      //     switch (option) {
+      //         case 1: alert(`su saldo es ${saldocuenta}`);
+      //         break;
+      //         case 2:
+      //             let retiro = (parseInt(prompt(" ingrese cuanto desea retirar ")));
+      //             if (retiro > saldocuenta) {
+      //                 alert("cantidad no valido")
+      //             } else {
+      //                 saldocuenta -= retiro;
+      //                 alert("transacción exitosa: \n1. usted ha retirado:" + retiro + "\n2. Usted tiene: " + saldocuenta + " en su cuenta.");
+      //                 break;
+      //             }
+      //         case 3:
+      //         let consigna = parseInt(prompt("ingrese cuanto desea consignar sin puntos ni comas"))
+      //         saldocuenta += consigna
+      //         alert("transacíon exitosa usted consigno: " + consigna + " por lo que su actual saldo de cuenta es: " + saldocuenta )
+      //         break;
+      //         case 4:
+      //             alert("gracias por su transacción")
+      //         default: alert("transacción incorrecta")
+      //         break;
+      //     }
+      // }
+      //tablas
+      let tabla = parseInt(
+        prompt("ingrese que tabla de multiplicar desea realizar: ")
+      );
+      let n = 0;
+      while (n <= 10) {
+        let respuesta = n * tabla;
+        console.log(
+          `la tabla de ${tabla} es: \n ${n}x ${tabla} = ${respuesta}`
+        );
+        n++;
+      }
+    </script>
+  </body>
+</html>
