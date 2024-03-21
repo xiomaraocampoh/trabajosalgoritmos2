@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // va el comando function seguido de una descripcción como nombre de la función
+        //Ejericios: un número  
+
+        function par (numero){
+             if (numero%2 ==0){
+                return "EL NÚMERO ES PAR"
+             } else{
+                return "El número es impar"
+             }  
+      }
+      console.log (par(227))
+      function semaforo (estado,color){
+        if(estado == "apagado"){
+            return "el semaforo esta pagado"
+        }
+        else if(color=="amarillo"){
+            return "preparese"
+        }else if(color=="verde"){
+            return "arranque"
+        }else if(color=="rojo"){
+            return "pare"
+        }
+        }
+console.log (semaforo ("encendido","verde"))
+      
+
+    </script>
+</body>
+</html>
