@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function contarVocales(str) {
+  str = str.toLowerCase();
+  let vocales = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+      vocales++;
+    }
+  }
+
+  return vocales;
+}
+
+console.log(contarVocales("Hola")); // Output: 2
+console.log(contarVocales("JavaScript")); // Output: 3
+console.log(contarVocales("xyz")); // Output: 0
+console.log(contarVocales("AeIoU")); // Output: 5
+
+    </script>
+</body>
+</html>

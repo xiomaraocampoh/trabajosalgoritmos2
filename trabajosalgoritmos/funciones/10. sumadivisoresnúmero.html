@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function sumaDivisores(num) {
+        if (!Number.isInteger(num)) {
+          return "El valor debe ser un número entero.";
+        }
+        num = Math.abs(num);
+        let suma = 0;
+        for (let i = 1; i < num; i++) {
+          if (num % i === 0) {
+            suma += i;
+          }
+        }
+        return suma;
+      }
+      
+      console.log(sumaDivisores(12)); // Output: 16
+      console.log(sumaDivisores(-6)); // Output: 6
+      console.log(sumaDivisores(1)); // Output: 0
+      console.log(sumaDivisores(3.5)); // Output: "El valor debe ser un número entero."</script>
+</body>
+</html>
