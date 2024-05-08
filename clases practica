@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Construya un algoritmo con JavaScript” para las estadísticas de atención de una universidad
+class universidad {
+constructor(telefono,oficina){
+this.telefono
+
+
+}
+
+}
+
+
+    </script>
+</body>
+</html>
