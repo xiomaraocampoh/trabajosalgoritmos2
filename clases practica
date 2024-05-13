@@ -8,14 +8,58 @@
 <body>
     <script>
 //Construya un algoritmo con JavaScript” para las estadísticas de atención de una universidad
-class universidad {
-constructor(telefono,oficina){
-this.telefono
+class universidadclass {
+  constructor() {
+    this.usuariosAtendidos = 0;
+    this.módulosAtención = {
+      terminal: {
+        total: 0,
+        estudiantes: 0,
+        docentes: 0,
+        transferencias: 0
+      },
+      oficina: {
+        total: 0,
+        estudiantes: 0,
+        docentes: 0,
+        transferencias: 0
+      }
+    };
+    this.transferencias = {
+      terminalAOficina: 0,
+      oficinaATerminal: 0
+    };
+  }
 
+  atenderUsuario(módulo, tipoUsuario) {
+    this.usuariosAtendidos++;
+    this.módulosAtención[módulo].total++;
+    this.módulosAtención[módulo][tipoUsuario]++;
+  }
 
+  transferirUsuario(desdeMódulo, hastaMódulo) {
+    this.transferencias[`${desdeMódulo}A${hastaMódulo}`]++;
+    this.módulosAtención[desdeMódulo].transferencias++;
+    this.módulosAtención[hastaMódulo].transferencias++;
+  }
+
+  obtenerEstadísticas() {
+    return {
+      usuariosAtendidos: this.usuariosAtendidos,
+      módulosAtención: this.módulosAtención,
+      transferencias: this.transferencias
+    };
+  }
 }
 
-}
+const estadísticasAtención = new EstadísticasAtención();
+
+estadísticasAtención.atenderUsuario('terminal', 'estudiantes');
+estadísticasAtención.atenderUsuario('oficina', 'docentes');
+estadísticasAtención.transferirUsuario('terminal', 'oficina');
+estadísticasAtención.transferirUsuario('oficina', 'terminal');
+
+console.log(estadísticasAtención.obtenerEstadísticas());
 
 
     </script>
