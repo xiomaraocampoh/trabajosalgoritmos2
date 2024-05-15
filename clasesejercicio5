@@ -1,0 +1,47 @@
+class Producto {
+    constructor(codigo, descripcion, precioCompra, precioVenta, cantidadBodega, cantidadMinima, cantidadMaxima, porcentajeDescuento) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.precioCompra = precioCompra;
+        this.precioVenta = precioVenta;
+        this.cantidadBodega = cantidadBodega;
+        this.cantidadMinima = cantidadMinima;
+        this.cantidadMaxima = cantidadMaxima;
+        this.porcentajeDescuento = porcentajeDescuento;
+    }
+
+    solicitarPedido() {
+        return this.cantidadBodega <= this.cantidadMinima;
+    }
+
+    calcularTotalAPagar(cantidadCompra) {
+        let totalAPagar = cantidadCompra * this.precioCompra;
+        if (cantidadCompra > this.cantidadMaxima) {
+            totalAPagar *= (1 - this.porcentajeDescuento / 100);
+        }
+        return totalAPagar;
+    }
+}
+class PrendaVestir extends Producto {
+    constructor(codigo, descripcion, precioCompra, precioVenta, cantidadBodega, cantidadMinima, cantidadMaxima, porcentajeDescuento, talla, permitePlanchado) {
+        super(codigo, descripcion, precioCompra, precioVenta, cantidadBodega, cantidadMinima, cantidadMaxima, porcentajeDescuento);
+        this.talla = talla;
+        this.permitePlanchado = permitePlanchado;
+    }
+}
+
+// Definición de la subclase Calzado
+class Calzado extends Producto {
+    constructor(codigo, descripcion, precioCompra, precioVenta, cantidadBodega, cantidadMinima, cantidadMaxima, porcentajeDescuento, talla) {
+        super(codigo, descripcion, precioCompra, precioVenta, cantidadBodega, cantidadMinima, cantidadMaxima, porcentajeDescuento);
+        this.talla = talla;
+    }
+}
+
+let productosPrendaVestir = [];
+let productosCalzado = [];
+let nuevaPrenda = new PrendaVestir("PV001", "Blusa de algodón", 20, 40, 10, 5, 20, 10, "M", true);
+productosPrendaVestir.push(nuevaPrenda);
+
+let nuevoCalzado = new Calzado("C001", "Zapatos de cuero", 50, 100, 8, 4, 15, 15, 38);
+productosCalzado.push(nuevoCalzado);
